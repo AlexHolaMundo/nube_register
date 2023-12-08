@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrate</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script src="./js/index.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="columns container todo">
+      <div class="column is-one-quarter contenido">
+        <div class="is-align-self-center">
+          <h3 class="subtitle is-2 has-text-primary-light">Registrate</h3>
+        </div>
+        <div class="vaquita">
+          <form class="formularito">
+            <div class="field">
+              <label class="label">NOMBRES</label>
+              <div class="control">
+                <input
+                  id="nombre"
+                  class="input"
+                  type="text"
+                  placeholder="Tus Nombres"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">APELLIDOS</label>
+              <div class="control">
+                <input
+                  id="apellido"
+                  class="input"
+                  type="text"
+                  placeholder="Tus Apellidos "
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">EMAIL</label>
+              <div class="control">
+                <input
+                  id="mail"
+                  class="input"
+                  type="email"
+                  placeholder="alguien@example.com"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">ASUNTO</label>
+              <div class="control">
+                <div class="select">
+                  <select id="opciones">
+                    <option disabled>SELECCIONA UNA OPCION</option>
+                    <option value="tareas">TAREAS</option>
+                    <option value="ayudas">AYUDAS</option>
+                    <option value="tutorias">TUTORIAS</option>
+                    <option value="reclamos">RECLAMOS</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">MENSAJE</label>
+              <div class="control">
+                <textarea
+                  id="mensaje"
+                  class="textarea"
+                  placeholder="Escribe tu mensaje aqui"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-primary" type="button" id="btn-enviar">
+                  ENVIAR
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="columns is-two-fifths tablita container">
+        <table
+          class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+        >
+          <thead>
+            <tr>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>CORREO</th>
+              <th>ASUNTO</th>
+              <th>MENSAJE</th>
+              <th class="acciones">ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody id="miTabla"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
