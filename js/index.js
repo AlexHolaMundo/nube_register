@@ -33,6 +33,7 @@ export const db = getDatabase(app)
 const enviar = document.getElementById('btn-enviar')
 const miTabla = document.getElementById('miTabla')
 
+//Funcion para guardar datos en la tabla
 const guardar = () => {
   const name = document.getElementById('nombre').value
   const last = document.getElementById('apellido').value
@@ -50,7 +51,7 @@ const guardar = () => {
 }
 
 enviar.addEventListener('click', guardar)
-
+//Fucion para mostrar datos en el index
 const mostrarDatosEnTabla = (datos) => {
   miTabla.innerHTML = ''
 
@@ -70,7 +71,7 @@ const mostrarDatosEnTabla = (datos) => {
     miTabla.appendChild(fila)
   })
 }
-
+//Mostrar datos 
 onValue(ref(db, 'Tipanluisa'), (snapshot) => {
   const datos = []
   snapshot.forEach((childSnapshot) => {
@@ -84,7 +85,7 @@ onValue(ref(db, 'Tipanluisa'), (snapshot) => {
 const eliminarRegistro = (key) => {
   remove(ref(db, `Tipanluisa/${key}`))
 }
-
+//Funcion obtener datos via key
 const obtenerRegistroPorClave = async (key) => {
   try {
     const snapshot = await get(ref(db, `Tipanluisa/${key}`))
@@ -119,7 +120,7 @@ miTabla.addEventListener('click', async (event) => {
     }
   }
 })
-//Actualizar Datos
+//Mostrar datos actualizados en la tabla
 const mostrarDatosEnTablaActualizada = async () => {
   try {
     const snapshot = await get(ref(db, 'Tipanluisa'))
@@ -137,6 +138,7 @@ const mostrarDatosEnTablaActualizada = async () => {
   }
 }
 
+//Rellenar formulario 
 const llenarFormulario = (datos) => {
   document.getElementById('nombre').value = datos.nombre
   document.getElementById('apellido').value = datos.apellido
@@ -144,7 +146,7 @@ const llenarFormulario = (datos) => {
   document.getElementById('opciones').value = datos.opciones
   document.getElementById('mensaje').value = datos.mensaje
 }
-
+//Mostrar boton una vez se de click en modificar
 const agregarBotonGuardarCambios = (key) => {
   const botonGuardarCambios = document.createElement('button')
   botonGuardarCambios.classList.add('button', 'is-success')
@@ -170,11 +172,11 @@ const agregarBotonGuardarCambios = (key) => {
 
   document.querySelector('.field.is-grouped').appendChild(botonGuardarCambios)
 }
-
+//Funcion actualizar registro
 const actualizarRegistro = (key, nuevosDatos) => {
   update(ref(db, `Tipanluisa/${key}`), nuevosDatos)
 }
-
+//Limpiar formulario al actualizar
 const limpiarFormulario = () => {
   document.getElementById('nombre').value = ''
   document.getElementById('apellido').value = ''
@@ -182,7 +184,7 @@ const limpiarFormulario = () => {
   document.getElementById('opciones').value = ''
   document.getElementById('mensaje').value = ''
 }
-
+//Eliminar cambios desde tabla
 const eliminarBotonGuardarCambios = () => {
   const botonGuardarCambios = document.querySelector('.button.is-success')
   if (botonGuardarCambios) {
