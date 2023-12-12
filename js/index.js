@@ -10,20 +10,20 @@ import {
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyApHcE_64KOE_Y052l6Hov0nvE0URHWjL4',
+  /*apiKey: 'AIzaSyApHcE_64KOE_Y052l6Hov0nvE0URHWjL4',
   authDomain: 'helloworld-4132d.firebaseapp.com',
   databaseURL: 'https://helloworld-4132d-default-rtdb.firebaseio.com',
   projectId: 'helloworld-4132d',
   storageBucket: 'helloworld-4132d.appspot.com',
   messagingSenderId: '319619940944',
-  appId: '1:319619940944:web:aa44273d0d069c29a38755',
-  /*apiKey: 'AIzaSyBMJsVpnbOwVOiVNbTZScZdet9qlGigDL0',
+  appId: '1:319619940944:web:aa44273d0d069c29a38755',*/
+  apiKey: 'AIzaSyBMJsVpnbOwVOiVNbTZScZdet9qlGigDL0',
   authDomain: 'conexion-8ec0d.firebaseapp.com',
   databaseURL: 'https://conexion-8ec0d-default-rtdb.firebaseio.com',
   projectId: 'conexion-8ec0d',
   storageBucket: 'conexion-8ec0d.appspot.com',
   messagingSenderId: '679910299749',
-  appId: '1:679910299749:web:9800b464879628b4850e8c',*/
+  appId: '1:679910299749:web:9800b464879628b4850e8c',
 }
 
 // Initialize Firebase
