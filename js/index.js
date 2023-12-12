@@ -10,20 +10,20 @@ import {
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
 
 const firebaseConfig = {
-  /*apiKey: 'AIzaSyApHcE_64KOE_Y052l6Hov0nvE0URHWjL4',
+  apiKey: 'AIzaSyApHcE_64KOE_Y052l6Hov0nvE0URHWjL4',
   authDomain: 'helloworld-4132d.firebaseapp.com',
   databaseURL: 'https://helloworld-4132d-default-rtdb.firebaseio.com',
   projectId: 'helloworld-4132d',
   storageBucket: 'helloworld-4132d.appspot.com',
   messagingSenderId: '319619940944',
-  appId: '1:319619940944:web:aa44273d0d069c29a38755',*/
-  apiKey: 'AIzaSyBMJsVpnbOwVOiVNbTZScZdet9qlGigDL0',
+  appId: '1:319619940944:web:aa44273d0d069c29a38755',
+  /*apiKey: 'AIzaSyBMJsVpnbOwVOiVNbTZScZdet9qlGigDL0',
   authDomain: 'conexion-8ec0d.firebaseapp.com',
   databaseURL: 'https://conexion-8ec0d-default-rtdb.firebaseio.com',
   projectId: 'conexion-8ec0d',
   storageBucket: 'conexion-8ec0d.appspot.com',
   messagingSenderId: '679910299749',
-  appId: '1:679910299749:web:9800b464879628b4850e8c',
+  appId: '1:679910299749:web:9800b464879628b4850e8c',*/
 }
 
 // Initialize Firebase
@@ -57,14 +57,14 @@ const mostrarDatosEnTabla = (datos) => {
   datos.forEach((item) => {
     const fila = document.createElement('tr')
     fila.innerHTML = `
-      <td>${item.nombre}</td>
-      <td>${item.apellido}</td>
-      <td>${item.mail}</td>
-      <td>${item.opciones}</td>
-      <td>${item.mensaje}</td>
-      <td>
-        <button class="button is-danger eliminar" data-key="${item.key}">Eliminar</button>
-        <button class="button is-warning modificar" data-key="${item.key}">Modificar</button>
+      <td class='text-center'>${item.nombre}</td>
+      <td class='text-center'>${item.apellido}</td>
+      <td class='text-center'>${item.mail}</td>
+      <td class='text-center'>${item.opciones}</td>
+      <td class='text-center'>${item.mensaje}</td>
+      <td class='text-center'>
+        <button class="button btn btn-danger eliminar" data-key="${item.key}">Eliminar</button>
+        <button class="button btn btn-warning modificar" data-key="${item.key}">Modificar</button>
       </td>
     `
     miTabla.appendChild(fila)

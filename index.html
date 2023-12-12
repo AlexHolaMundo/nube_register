@@ -18,13 +18,11 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="columns container todo row">
-      <div class="col-md-6">
-        <div class="">
-          <h2 class="register-title">Registrate</h2>
-        </div>
+    <div class="row">
+      <div class="col-md-4 todo-form">
+        <h2 class="text-center" style="color: aliceblue">Registrate</h2>
         <form class="formularito">
-          <div class="mb-3">
+          <div class="mb-3 w-100">
             <label class="form-label">NOMBRES</label>
             <input
               id="nombre"
@@ -33,7 +31,7 @@
               placeholder="Tus Nombres"
             />
           </div>
-          <div class="mb-3">
+          <div class="mb-3 w-100">
             <label class="form-label">APELLIDOS</label>
             <input
               id="apellido"
@@ -42,7 +40,7 @@
               placeholder="Tus Apellidos "
             />
           </div>
-          <div class="mb-3">
+          <div class="mb-3 w-100">
             <label class="form-label">EMAIL</label>
             <input
               id="mail"
@@ -51,7 +49,7 @@
               placeholder="alguien@example.com"
             />
           </div>
-          <div class="mb-3">
+          <div class="mb-3 w-100">
             <label class="form-label">ASUNTO</label>
             <div class="select">
               <select id="opciones" class="form-select">
@@ -63,7 +61,7 @@
               </select>
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 w-100">
             <label class="form-label">MENSAJE</label>
             <textarea
               id="mensaje"
@@ -82,16 +80,17 @@
           </div>
         </form>
       </div>
-      <div class="col-md-6">
-        <table class="table table-dark table-sm bordered">
+
+      <div class="col-md-8 todo-tabla table-responsive">
+        <table class="table table-striped bordered tablita">
           <thead>
             <tr>
-              <th>NOMBRE</th>
-              <th>APELLIDO</th>
-              <th>CORREO</th>
-              <th>ASUNTO</th>
-              <th>MENSAJE</th>
-              <th class="acciones">ACCIONES</th>
+              <th class="text-center">NOMBRE</th>
+              <th class="text-center">APELLIDO</th>
+              <th class="text-center">CORREO</th>
+              <th class="text-center">ASUNTO</th>
+              <th class="text-center">MENSAJE</th>
+              <th class="text-center">ACCIONES</th>
             </tr>
           </thead>
           <tbody id="miTabla"></tbody>
